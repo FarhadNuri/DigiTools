@@ -1,0 +1,81 @@
+import React from "react";
+import bannerImage from "../../assets/banner.png"; // Make sure to replace with the actual image when needed
+
+function HeroBanner() {
+  return (
+    <div className="bg-white min-h-[80vh] flex items-center pt-10 pb-20">
+      <div className="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex-1 flex flex-col items-start gap-6">
+          <div
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full"
+            style={{ backgroundColor: "#e1e7ff" }}
+          >
+            <div
+              className="w-2.5 h-2.5 rounded-full"
+              style={{ backgroundColor: "#8a4bfa" }}
+            ></div>
+            <span className="text-sm font-semibold text-[#6631f7]">
+              New: AI-Powered Tools Available
+            </span>
+          </div>
+
+          <h1 className="text-5xl lg:text-6xl font-bold text-[#212538] ">
+            Supercharge Your <br /> Digital Workflow
+          </h1>
+
+          <p className="text-lg text-gray-500 max-w-lg">
+            Access premium AI tools, design assets, templates, and productivity
+            software—all in one place. Start creating faster today.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-2 items-center">
+            <button
+              className="btn text-white rounded-full border-none px-8 py-3 h-auto min-h-0  font-semibold"
+              style={{
+                background: "linear-gradient(to right, #6b33f8, #9b1cfb)",
+              }}
+            >
+              Explore Products
+            </button>
+            <button
+              className="btn rounded-full bg-white px-8 py-3 h-auto min-h-0  font-semibold flex items-center gap-2"
+              style={{ borderColor: "#a78bfa", color: "#6b33f8" }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Watch Demo
+            </button>
+          </div>
+        </div>
+
+        <div className="flex-1 w-full flex justify-center lg:justify-end">
+          <img
+            src={bannerImage}
+            className="w-full max-w-lg object-contain rounded-2xl shadow-sm"
+            alt="Hero Concept"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HeroBanner;

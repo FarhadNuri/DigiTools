@@ -2,10 +2,11 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div class="navbar bg-base-100 shadow-sm px-2 lg:px-8">
-      <div class="navbar-start lg:w-1/4">
+    <div className="bg-base-100 shadow-sm border-b border-gray-200 w-full">
+      <div className="navbar container mx-auto px-4 lg:px-12 flex justify-between">
+        <div className="navbar-start w-auto lg:w-1/4">
         <div class="dropdown">
-          <div tabIndex="0" role="button" class="btn btn-ghost lg:hidden">
+          <div tabIndex="0" role="button" class="btn btn-ghost px-1 lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -43,7 +44,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl lg:text-2xl font-bold px-2 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DigiTools</a>
+        <a class="btn btn-ghost text-lg lg:text-2xl font-bold px-1 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DigiTools</a>
       </div>
 
       <div class="navbar-center hidden lg:flex lg:w-1/2 justify-center">
@@ -66,7 +67,7 @@ function Navbar() {
         </ul>
       </div>
 
-      <div class="navbar-end lg:w-1/4 flex gap-1 lg:gap-4 pr-1 lg:pr-2">
+      <div className="navbar-end w-auto lg:w-1/4 flex gap-1 pr-1 lg:pr-2">
         <div class="dropdown dropdown-end">
           <div tabIndex="0" role="button" class="btn btn-ghost btn-circle btn-sm lg:btn-md mt-1 lg:mt-0">
             <div class="indicator">
@@ -102,11 +103,12 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="flex gap-1 lg:gap-2 items-center">
-          <a class="btn btn-ghost btn-sm lg:btn-md font-semibold px-2 lg:px-4">Login</a>
-          <a class="btn btn-sm lg:btn-md text-white rounded-full border-none px-3 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)' }}>Get Started</a>
+        <div className="flex gap-0.5 lg:gap-2 items-center shrink-0">
+          <a class="btn btn-ghost btn-xs lg:btn-md font-semibold px-1 lg:px-4">Login</a>
+          <a class="btn btn-xs lg:btn-md text-white rounded-full border-none px-2 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)' }}>Get Started</a>
         </div>
       </div>
+    </div>
     </div>
   );
 }
