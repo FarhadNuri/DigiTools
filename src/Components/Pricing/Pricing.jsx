@@ -6,7 +6,7 @@ function Pricing({ pricingPromise }) {
   const pricingData = pricing.data;
 
   return (
-    <section className="mx-auto mt-14 max-w-7xl px-4 text-center">
+    <section className="mx-auto mt-24 max-w-7xl px-4 text-center">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
         Simple, Transparent Pricing
       </h1>

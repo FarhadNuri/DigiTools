@@ -2,7 +2,7 @@ import React from "react";
 
 function PricingCard({ pricingData = [] }) {
   return (
-    <div className="mt-8 grid gap-4 md:grid-cols-3">
+    <div className="mt-10 grid gap-4 md:grid-cols-3">
       {pricingData.map((plan) => {
         const popular = Boolean(plan.badge);
         const buttonText = plan.btnText;
