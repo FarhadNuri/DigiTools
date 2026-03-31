@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "img": "/src/assets/productImages/p1.png",
+    "title": "AI Writing Pro",
+    "desc": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": "$29",
+    "period": "/Mo",
+    "badge": "Best Seller",
+    "badgeStyle": "bg-orange-100 text-orange-600 font-bold",
+    "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"]
+  },
+  {
+    "id": 2,
+    "img": "/src/assets/productImages/p2.png",
+    "title": "Design Templates Pack",
+    "desc": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": "$49",
+    "period": "/One-Time",
+    "badge": "Popular",
+    "badgeStyle": "bg-purple-100 text-[#8b3dff] font-bold",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"]
+  },
+  {
+    "id": 3,
+    "img": "/src/assets/productImages/p3.png",
+    "title": "Premium Stock Assets",
+    "desc": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+    "price": "$19",
+    "period": "/Mo",
+    "badge": "New",
+    "badgeStyle": "bg-green-100 text-green-600 font-bold",
+    "features": ["10M+ assets", "Commercial use", "No attribution"]
+  },
+  {
+    "id": 4,
+    "img": "/src/assets/productImages/p4.png",
+    "title": "Automation Toolkit",
+    "desc": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "price": "$79",
+    "period": "/Mo",
+    "badge": "Popular",
+    "badgeStyle": "bg-purple-100 text-[#8b3dff] font-bold",
+    "features": ["50+ automations", "API access", "Custom workflows"]
+  },
+  {
+    "id": 5,
+    "img": "/src/assets/productImages/p5.png",
+    "title": "Resume Builder Pro",
+    "desc": "Create professional resumes and cover letters that land interviews.",
+    "price": "$15",
+    "period": "/One-Time",
+    "badge": "New",
+    "badgeStyle": "bg-green-100 text-green-600 font-bold",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"]
+  },
+  {
+    "id": 6,
+    "img": "/src/assets/productImages/p6.png",
+    "title": "Social Media Content Kit",
+    "desc": "Complete toolkit for creating engaging social media content across all platforms.",
+    "price": "$39",
+    "period": "/Mo",
+    "badge": "Best Seller",
+    "badgeStyle": "bg-orange-100 text-orange-600 font-bold",
+    "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"]
+  }
+]
