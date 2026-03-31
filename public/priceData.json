@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "Starter",
+    "desc": "Perfect for getting started.",
+    "price": "$0",
+    "period": "/Mo",
+    "badge": "",
+    "badgeStyle": "",
+    "btnText": "Get Started Free",
+    "features": [
+      "Access to 10 free tools",
+      "Basic templates",
+      "Community support",
+      "1 project per month"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Pro",
+    "desc": "Best for professionals.",
+    "price": "$29",
+    "period": "/Mo",
+    "badge": "Most Popular",
+    "badgeStyle": "bg-purple-100 text-[#8b3dff] font-bold",
+    "btnText": "Start Pro Trial",
+    "features": [
+      "Access to all premium tools",
+      "Unlimited templates",
+      "Priority support",
+      "Unlimited projects",
+      "Cloud sync",
+      "Advanced analytics"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Enterprise",
+    "desc": "For teams and businesses.",
+    "price": "$99",
+    "period": "/Mo",
+    "badge": "",
+    "badgeStyle": "",
+    "btnText": "Contact Sales",
+    "features": [
+      "Everything in Pro",
+      "Team collaboration",
+      "Custom integrations",
+      "Dedicated support",
+      "SLA guarantee",
+      "Custom branding"
+    ]
+  }
+]

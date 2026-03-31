@@ -2,11 +2,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-[#0f1422] text-white pt-16 pb-8 px-8 md:px-16 lg:px-24 font-sans">
+    <footer className="bg-[#0f1422] text-white pt-16 pb-8 px-8 md:px-16 lg:px-24 mt-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
         <div className="md:w-1/3 text-left">
           <h2 className="text-3xl font-bold mb-4 text-white">DigiTools</h2>
-          <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
+          <p className="text-gray-300 text-sm max-w-sm">
             Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.
           </p>
         </div>

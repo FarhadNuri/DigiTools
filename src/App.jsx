@@ -7,8 +7,10 @@ import ProductCard from './Components/Products/ProductCard.jsx'
 import Products from './Components/Products/Products.jsx'
 import axios from 'axios'
 import Footer from './Components/Footer/Footer.jsx'
-const productsPromise = axios.get('/productsData.json')
+import Pricing from './Components/Pricing/Pricing.jsx'
 
+const productsPromise = axios.get('/productsData.json')
+const pricingPromise = axios.get('/priceData.json')
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Stats  />
       <ProductHeader />
       <Products productsPromise={productsPromise} />
+      <Pricing pricingPromise={pricingPromise} />
       <Footer />
     </div>
   )
