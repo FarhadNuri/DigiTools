@@ -1,8 +1,8 @@
 import React from "react";
 import StepsCard from "./StepsCard";
-import img1 from "../../assets/steps/s1.png";
-import img2 from "../../assets/steps/s2.png";
-import img3 from "../../assets/steps/s3.png";
+const img1 = "/steps/s1.png";
+const img2 = "/steps/s2.png";
+const img3 = "/steps/s3.png";
 
 const steps = [
   {

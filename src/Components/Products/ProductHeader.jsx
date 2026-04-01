@@ -10,7 +10,7 @@ function ProductHeader({ handleHeaderBtnClick, cartItems, headerBtn }) {
       
       <div className="flex items-center bg-white p-1 rounded-full border border-gray-100 shadow-sm mt-4">
         <button 
-          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all ${
+          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${
             headerBtn === "Products"
               ? "text-white bg-gradient-to-r from-[#4f39f6] to-[#9514fa]"
               : "text-[#6d28d9] hover:bg-gray-50"
@@ -20,7 +20,7 @@ function ProductHeader({ handleHeaderBtnClick, cartItems, headerBtn }) {
           Products
         </button>
         <button 
-          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all ${
+          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${
             headerBtn === "Cart"
               ? "text-white bg-gradient-to-r from-[#4f39f6] to-[#9514fa]"
               : "text-[#6d28d9] hover:bg-gray-50"

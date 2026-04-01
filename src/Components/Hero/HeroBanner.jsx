@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../../assets/banner.png"; // Make sure to replace with the actual image when needed
+const bannerImage = "/banner.png";
 
 function HeroBanner() {
   return (

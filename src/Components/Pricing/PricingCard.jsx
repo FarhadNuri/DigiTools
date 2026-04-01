@@ -57,7 +57,7 @@ function PricingCard({ pricingData = [] }) {
             <div className="mt-auto pt-7">
               <button
                 type="button"
-                className={`w-full rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
+                className={`w-full rounded-full px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer ${
                   popular
                     ? "bg-white text-violet-700 hover:bg-slate-100"
                     : "bg-violet-600 text-white hover:bg-violet-700"
