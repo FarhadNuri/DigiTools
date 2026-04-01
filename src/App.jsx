@@ -24,9 +24,15 @@ function App() {
     setCartItems((prevItems) => [...prevItems, cartItem]);
   };
 
+  const handleRemoveFromCart = (cartItemId) => {
+    setCartItems((prevItems) =>
+      prevItems.filter((item) => item.cartItemId !== cartItemId),
+    );
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar cartItems={cartItems} handleHeaderBtnClick={handleHeaderBtnClick} />
       <HeroBanner />
       <Stats />
       <ProductHeader
@@ -39,6 +45,7 @@ function App() {
         headerBtn={headerBtn}
         handleAddToCart={handleAddToCart}
         cartItems={cartItems}
+        handleRemoveFromCart={handleRemoveFromCart}
       />
       <Steps />
       <Pricing pricingPromise={pricingPromise} />
