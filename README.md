@@ -1,17 +1,20 @@
 # DigiTools
 
-## Little Description
+## Description
 DigiTools is a small web app for digital products.
 We can see product cards, check prices, and add items in cart.
 It is made for fast browsing and easy buying flow.
 UI is clean and simple, so users dont get confused.
 
 ## Technology I Use
+- JavaScript
 - React
 - Vite
 - Tailwind CSS
 - DaisyUI
 - Axios
+- React Toast
+- JSON (for product data)
 
 ## Features
 1. Product section with cards and quick Buy button.
