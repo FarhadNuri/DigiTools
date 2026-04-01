@@ -1,6 +1,7 @@
 import React from "react";
+import { useState } from "react";
+function ProductCard({ productsData, handleAddToCart }) {
 
-function ProductCard({ productsData }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-7xl mx-auto px-4">
       {productsData.map(({ id, title, desc, price, period, badge, badgeStyle, features, img }) => (
@@ -42,6 +43,7 @@ function ProductCard({ productsData }) {
               <button 
                 className="btn btn-block text-white border-none rounded-full"
                 style={{ background: 'linear-gradient( #4f39f6, #9514fa)' }}
+                onClick={() => handleAddToCart({ id, title, price,img })}
               >
                 Buy Now
               </button>

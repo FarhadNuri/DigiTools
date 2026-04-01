@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProductHeader() {
+function ProductHeader({ handleHeaderBtnClick, cartItems, headerBtn }) {
   return (
     <div className="flex flex-col gap-3 text-center py-10 mt-10 items-center">
       <h1 className="text-4xl lg:text-5xl font-semibold text-[#1e2336]">Premium Digital Tools</h1>
@@ -10,15 +10,24 @@ function ProductHeader() {
       
       <div className="flex items-center bg-white p-1 rounded-full border border-gray-100 shadow-sm mt-4">
         <button 
-          className="px-8 py-2.5 rounded-full text-sm font-semibold text-white transition-all"
-          style={{ background: 'linear-gradient( #6d28d9, #9333ea)' }}
+          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all ${
+            headerBtn === "Products"
+              ? "text-white bg-gradient-to-r from-[#4f39f6] to-[#9514fa]"
+              : "text-[#6d28d9] hover:bg-gray-50"
+          }`}
+          onClick={()=> handleHeaderBtnClick("Products")}
         >
           Products
         </button>
         <button 
-          className="px-8 py-2.5 rounded-full text-sm font-semibold text-[#6d28d9] transition-all hover:bg-gray-50"
+          className={`px-8 py-2.5 rounded-full text-sm font-semibold transition-all ${
+            headerBtn === "Cart"
+              ? "text-white bg-gradient-to-r from-[#4f39f6] to-[#9514fa]"
+              : "text-[#6d28d9] hover:bg-gray-50"
+          }`}
+          onClick={()=> handleHeaderBtnClick("Cart")}
         >
-          Cart (2)
+          Cart ({cartItems.length})
         </button>
       </div>
     </div>
