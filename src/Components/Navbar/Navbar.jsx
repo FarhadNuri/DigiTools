@@ -1,40 +1,75 @@
 import React from "react";
 
 function Navbar({ cartItems = [], handleHeaderBtnClick = () => {} }) {
-    const parsePrice = (value) => {
-  return Number(value.slice(1));
-};
+  const parsePrice = (value) => {
+    return Number(value.slice(1));
+  };
 
   const total = cartItems.reduce((sum, item) => {
-    const amount = parsePrice(item.price)
-    return sum + amount
-  }, 0)
+    const amount = parsePrice(item.price);
+    return sum + amount;
+  }, 0);
   return (
     <div className="bg-base-100 shadow-sm border-b border-gray-200 w-full">
       <div className="navbar container mx-auto px-4 lg:px-12 flex justify-between">
         <div className="navbar-start w-auto lg:w-1/4">
-        <div className="dropdown">
-          <div tabIndex="0" role="button" className="btn btn-ghost px-1 lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="dropdown">
+            <div
+              tabIndex="0"
+              role="button"
+              className="btn btn-ghost btn-circle btn-md px-1 lg:hidden"
             >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>Products</a>
+              </li>
+              <li>
+                <a>Features</a>
+              </li>
+              <li>
+                <a>Pricing</a>
+              </li>
+              <li>
+                <a>Testimonials</a>
+              </li>
+              <li>
+                <a>FAQ</a>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          <a
+            className="btn btn-ghost text-2xl lg:text-3xl font-extrabold px-1 lg:px-4"
+            style={{
+              background: "linear-gradient(to right, #4f39f6, #9514fa)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
+            DigiTools
+          </a>
+        </div>
+
+        <div className="navbar-center hidden lg:flex lg:w-1/2 justify-center">
+          <ul className="menu menu-horizontal px-1 gap-2 font-medium text-gray-700">
             <li>
               <a>Products</a>
             </li>
@@ -52,81 +87,84 @@ function Navbar({ cartItems = [], handleHeaderBtnClick = () => {} }) {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-lg lg:text-2xl font-bold px-1 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DigiTools</a>
-      </div>
 
-      <div className="navbar-center hidden lg:flex lg:w-1/2 justify-center">
-        <ul className="menu menu-horizontal px-1 gap-2 font-medium text-gray-700">
-          <li>
-            <a>Products</a>
-          </li>
-          <li>
-            <a>Features</a>
-          </li>
-          <li>
-            <a>Pricing</a>
-          </li>
-          <li>
-            <a>Testimonials</a>
-          </li>
-          <li>
-            <a>FAQ</a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="navbar-end w-auto lg:w-1/4 flex gap-1 pr-1 lg:pr-2">
-        <div className="dropdown dropdown-end">
-          <div
-            tabIndex="0"
-            role="button"
-            className="btn btn-ghost btn-circle btn-sm lg:btn-md mt-1 lg:mt-0"
-            onClick={() => handleHeaderBtnClick("Cart")}
-          >
-            <div className="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />{" "}
-              </svg>
-              <span className="badge badge-sm indicator-item">{cartItems.length}</span>
-            </div>
-          </div>
-          <div
-            tabIndex="0"
-            className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
-          >
-            <div className="card-body">
-              <span className="text-lg font-bold">{cartItems.length} Items</span>
-              <span className="text-info">Subtotal: ${total}</span>
-              <div className="card-actions">
-                <button
-                  className="btn btn-primary btn-block"
-                  onClick={() => handleHeaderBtnClick("Cart")}
+        <div className="navbar-end w-auto lg:w-1/4 flex gap-1 pr-1 lg:pr-2">
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex="0"
+              role="button"
+              className="btn btn-ghost btn-circle btn-lg mt-1 lg:mt-0"
+              onClick={() => handleHeaderBtnClick("Cart")}
+            >
+              <div className="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  View cart
-                </button>
+                  {" "}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />{" "}
+                </svg>
+                <span className="badge badge-sm indicator-item">
+                  {cartItems.length}
+                </span>
+              </div>
+            </div>
+            <div
+              tabIndex="0"
+              className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+            >
+              <div className="card-body">
+                <span className="text-lg font-bold">
+                  {cartItems.length} Items
+                </span>
+                <span className="text-info">Subtotal: ${total}</span>
+                <div className="card-actions">
+                  <button
+                    className="btn btn-primary btn-block"
+                    onClick={() => handleHeaderBtnClick("Cart")}
+                  >
+                    View cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex gap-0.5 lg:gap-2 items-center shrink-0">
-          <a className="btn btn-ghost btn-xs lg:btn-md font-semibold px-1 lg:px-4">Login</a>
-          <a className="btn btn-xs lg:btn-md text-white rounded-full border-none px-2 lg:px-4" style={{ background: 'linear-gradient(to right, #4f39f6, #9514fa)' }}>Get Started</a>
+          <div className="hidden lg:flex gap-0.5 lg:gap-2 items-center shrink-0">
+            <a className="btn btn-outline border-black text-black hover:bg-black hover:text-white btn-xs lg:btn-md font-semibold px-1 lg:px-4">
+              Login
+            </a>
+            <a
+              className="btn btn-xs lg:btn-md text-white rounded-full border-none px-2 lg:px-4"
+              style={{
+                background: "linear-gradient(to right, #4f39f6, #9514fa)",
+              }}
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:hidden px-4 pb-3 flex flex-col gap-2">
+        <a className="btn btn-outline border-black text-black hover:bg-black hover:text-white w-full font-semibold">
+          Login
+        </a>
+        <a
+          className="btn w-full text-white rounded-full border-none"
+          style={{ background: "linear-gradient(to right, #4f39f6, #9514fa)" }}
+        >
+          Get Started
+        </a>
+      </div>
     </div>
   );
 }

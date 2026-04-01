@@ -9,6 +9,8 @@ import Footer from "./Components/Footer/Footer.jsx";
 import Pricing from "./Components/Pricing/Pricing.jsx";
 import Steps from "./Components/Steps/Steps.jsx";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const productsPromise = axios.get("/productsData.json");
 const pricingPromise = axios.get("/priceData.json");
 
@@ -22,12 +24,20 @@ function App() {
   const handleAddToCart = (product) => {
     const cartItem = { ...product, cartItemId: crypto.randomUUID() };
     setCartItems((prevItems) => [...prevItems, cartItem]);
+    toast.success("Product added to cart");
   };
 
   const handleRemoveFromCart = (cartItemId) => {
+    const removedItem = cartItems.find((item) => item.cartItemId === cartItemId);
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.cartItemId !== cartItemId),
     );
+    toast.info(removedItem ? `${removedItem.title} removed from cart` : "Product removed");
+  };
+
+  const handleCheckout = () => {
+    setCartItems([]);
+    toast.success("Purchase complete");
   };
 
   return (
@@ -46,10 +56,12 @@ function App() {
         handleAddToCart={handleAddToCart}
         cartItems={cartItems}
         handleRemoveFromCart={handleRemoveFromCart}
+        handleCheckout={handleCheckout}
       />
       <Steps />
       <Pricing pricingPromise={pricingPromise} />
       <Footer />
+      <ToastContainer position="top-right" autoClose={2000} />
     </div>
   );
 }

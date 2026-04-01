@@ -10,6 +10,7 @@ function Products({
   handleAddToCart,
   cartItems,
   handleRemoveFromCart,
+  handleCheckout,
 }) {
   const products = use(productsPromise);
   const productsData = products.data;
@@ -22,6 +23,7 @@ function Products({
         <ProductCart
           cartItems={cartItems}
           handleRemoveFromCart={handleRemoveFromCart}
+          handleCheckout={handleCheckout}
         />
       ) : (
         <ProductCard

@@ -1,7 +1,11 @@
 import React from "react";
 import { GiShoppingCart } from "react-icons/gi";
 
-function ProductCart({ cartItems = [], handleRemoveFromCart = () => {} }) {
+function ProductCart({
+  cartItems = [],
+  handleRemoveFromCart = () => {},
+  handleCheckout = () => {},
+}) {
   const parsePrice = (value) => {
     return Number(value.slice(1));
   };
@@ -69,7 +73,10 @@ function ProductCart({ cartItems = [], handleRemoveFromCart = () => {} }) {
               </span>
             </div>
 
-            <button className="mt-5 w-full rounded-full bg-gradient-to-r from-[#4f39f6] to-[#9514fa] px-5 py-3 text-sm font-semibold text-white">
+            <button
+              className="mt-5 w-full rounded-full bg-gradient-to-r from-[#4f39f6] to-[#9514fa] px-5 py-3 text-sm font-semibold text-white"
+              onClick={handleCheckout}
+            >
               Proceed To Checkout
             </button>
           </>
