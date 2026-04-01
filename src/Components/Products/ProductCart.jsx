@@ -57,7 +57,7 @@ function ProductCart({
                   </div>
 
                   <button
-                    className="text-sm font-medium text-pink-500 hover:text-pink-600"
+                    className="text-sm font-medium text-pink-500 hover:text-pink-600 cursor-pointer"
                     onClick={() => handleRemoveFromCart(item.cartItemId)}
                   >
                     Remove
@@ -74,7 +74,7 @@ function ProductCart({
             </div>
 
             <button
-              className="mt-5 w-full rounded-full bg-gradient-to-r from-[#4f39f6] to-[#9514fa] px-5 py-3 text-sm font-semibold text-white"
+              className="mt-5 w-full rounded-full bg-gradient-to-r from-[#4f39f6] to-[#9514fa] px-5 py-3 text-sm font-semibold text-white cursor-pointer"
               onClick={handleCheckout}
             >
               Proceed To Checkout
